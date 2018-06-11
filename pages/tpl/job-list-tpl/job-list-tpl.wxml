@@ -1,0 +1,6 @@
+<import src="/pages/tpl/job-item-tpl/job-item-tpl.wxml" />
+<template name="job-list-tpl">
+    <block wx:for="{{jobs}}" wx:for-item="job" wx:key="unique">
+        <template is="job-item-tpl" data="{{...job}}"></template>
+    </block>
+</template>

@@ -1,0 +1,78 @@
+/* pages/tpl/job-item-tpl/job-item-tpl.wxss */
+/* 职位 */
+.job-item-tpl{
+    display: flex;
+    flex-direction: row;
+    width:95%; 
+    border-bottom: 1rpx solid #f2f2f2;
+    margin:0 auto 0 auto;
+    padding-top:26rpx;
+    padding-bottom: 30rpx;
+  }
+  
+  .company-avatar {
+    width: 120rpx;
+    height: 120rpx;
+  }
+  
+  
+  .job-info {
+    display: flex;
+    flex-direction: column;
+    margin-left:27rpx;
+    width:430rpx;
+  }
+  
+  .job-title {
+    font-size:17px;
+  
+  }
+  
+  .company-name {
+    font-size:26rpx;
+    color: #9a9a9a;
+    white-space: 1rpx;
+    letter-spacing: 1rpx;
+    margin-top:9rpx;
+  }
+  
+  .job-tips {
+    display: flex;
+    flex-direction: row;
+    font-size:24rpx;
+    color: #9a9a9a;
+    margin-top:15rpx;
+    flex-wrap: nowrap;
+  }
+  
+  .job-tips text {
+    border-right: 1rpx solid #f2f2f2;
+    padding-right:14rpx;
+    padding-left:14rpx;
+    white-space: nowrap;
+  }
+  
+  .job-tips text:first-child {
+    padding-left:0;
+  
+  }
+  .job-tips text:last-child {
+    border-right: none;
+  }
+  
+  .job-right {
+    /* right:0px; */
+    margin-left:0px;
+  }
+  
+  .job-pay {
+    color: #f15b5b;
+    font-size: 30rpx;
+    white-space: nowrap;
+  }
+  
+  .publish-date {
+    font-size:24rpx;
+    color: #9a9a9a;
+    margin-top:60rpx;
+  }

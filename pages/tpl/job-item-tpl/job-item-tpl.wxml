@@ -1,0 +1,18 @@
+<template name="job-item-tpl">
+    <view class="job-item-tpl">
+        <image class="company-avatar" src="{{company_img}}"></image>
+        <view class="job-info">
+          <view class='job-title'>{{title}}</view>
+          <view class="company-name">{{company_short_name}}</view>
+          <view class="job-tips">
+            <text>北京</text>
+            <text>{{work_years}}</text>
+            <text>{{degree_need}}</text>
+          </view>
+        </view>
+        <view class="job-right">
+          <view class="job-pay">{{salary}}</view>
+          <view class="publish-date">{{release_time}}</view>
+        </view>
+      </view>
+</template>

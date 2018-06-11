@@ -1,0 +1,17 @@
+<import src="../tpl/job-list-tpl/job-list-tpl.wxml"/>
+
+<view class="search">
+  <icon type='search' class="search-img" size="16" ></icon>
+  <input type='text' value="{{keyword}}" placeholder='输入公司或职位' placeholder-class='placeholder' 
+  maxlength='20' bindfocus='onSearchFocus' bindconfirm='onSearchConfirm' focus="{{searchPanelShow}}"/>
+  <image class="cancel-img" bindtap="onCancelImgTap" wx:if="{{searchPanelShow}}" src="/images/xx.png"></image>
+</view>
+
+<view class='container' scroll-y="{{true}}" 
+  bindscrolltolower="onScrollToLower" wx:if="{{containerShow}}">
+  <template is="job-list-tpl" data="{{jobs:jobInfo}}"/>
+</view>
+
+<view class="search-panel"  wx:if="{{searchPanelShow}}">
+panel
+</view>
