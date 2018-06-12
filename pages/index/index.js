@@ -107,6 +107,13 @@ Page({
       });
     });
   },
+  onJobItemTap:function(event) {
+    // console.log(event);
+    var id = job.getDataset(event).id;
+    wx.navigateTo({
+      url: '/pages/job-detail/job-detail?id='+id,
+    });
+  },
   /**
    * 存在更多数据
    */

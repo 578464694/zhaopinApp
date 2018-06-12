@@ -1,0 +1,3 @@
+<template name="salary-tpl">
+ <view class="job-pay">{{salary}}</view>
+</template>

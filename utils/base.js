@@ -8,6 +8,10 @@ class Base {
         return event.detail.value;
     }
 
+    getDataset(event) {
+      return event.currentTarget.dataset;
+    }
+
     request(params) {
         let method = params.method ? params.method : "GET";
         wx.request({

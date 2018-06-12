@@ -1,0 +1,5 @@
+  .job-pay {
+    color: #fd5f39;
+    font-size: 30rpx;
+    white-space: nowrap;
+  }

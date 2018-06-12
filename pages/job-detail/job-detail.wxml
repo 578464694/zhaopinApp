@@ -1,0 +1,62 @@
+<!--pages/job-detail/job-detail.wxml-->
+<import src="../tpl/salary-tpl/salary-tpl.wxml" />
+
+
+
+<view class="container">
+<!-- 标题 -->
+  <view class="header section">
+    <view class="h1">{{job.title}}</view>
+    <view class="job-infos">
+      <template is="salary-tpl" data="{{salary:job.salary}}"/>
+      <view>/{{job.city}}</view>
+      <view>/{{job.work_years}}</view>
+      <view>/{{job.degree_need}}</view>
+    </view>
+    <view class="advantage">职位诱惑：<text>{{job.job_advantage}}</text></view>
+  </view>
+  <!-- 公司 -->
+  <view class="section company">
+    <view class="h2 company-name">{{job.company_short_name}}</view>
+    <view></view>
+    <image class="avatar" src="{{job.company_img}}"></image>
+  </view>
+  <!-- 描述 -->
+  <view class="delimiter"></view>
+  <view class="section job-about">
+    <view class="static-title top-title">职位描述</view>
+    <view class="tips">
+      <block wx:for="{{job.tags}}" wx:for-index="idx" wx:for-item="tag" wx:key="unique">
+        <view wx:if="{{idx < 4}}">{{tag}}</view>
+      </block>
+    </view>
+    <text class="job-desc">{{job.job_desc}}</text>
+    <view class="static-title">工作地址</view>
+    <view class="address">{{job.addr}}</view>
+  </view>
+  <view class="delimiter"></view>
+  <view class="section job-about">
+    <view class="static-title top-title">相似职位</view>
+
+    <block wx:for="{{similarJobs}}" wx:for-item="sJob">
+      <view class="job-section" data-id="{{sJob.id}}" catchtap='onJobItemTap'>
+        <view class="job-item">
+          <view class="h3">{{sJob.title}}</view>
+          <template is="salary-tpl" data="{{salary:sJob.salary}}"/>
+        </view>
+        <view class="job-item">
+          <view class="job-infos">
+            <view>{{sJob.city}}</view>
+            <view>/{{sJob.work_years}}</view>
+            <view>/{{sJob.degree_need}}</view>
+          </view>
+          <view class="datetime">{{sJob.short_time}}</view>
+        </view>
+        <view class='company-name'>
+          {{sJob.company_short_name}}
+        </view>
+      </view>
+    </block>
+
+  </view>
+</view>
